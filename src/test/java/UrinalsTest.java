@@ -14,9 +14,10 @@ public class UrinalsTest
     @Test
     public void isGoodString()
     {
-        String s = "1010101";
+        String s = "1010102";
         urinals urinal = new urinals();
-        assertEquals(true, urinal.isGoodString(s));
+        System.out.println(urinal.isGoodString(s));
+        assertEquals(false, urinal.isGoodString(s));
         System.out.println("====== Tirthkumar Atulkumar Patel == TEST 2 EXECUTED");
     }
 

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UrinalsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-27T20:30:31" hostname="LAPTOP-TURCB4O8" time="0.036">
+<testsuite name="UrinalsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-27T21:08:39" hostname="LAPTOP-TURCB4O8" time="0.021">
   <properties/>
-  <testcase name="CheckEmpty()" classname="UrinalsTest" time="0.036"/>
+  <testcase name="CheckEmpty()" classname="UrinalsTest" time="0.019"/>
+  <testcase name="isGoodString()" classname="UrinalsTest" time="0.001"/>
   <system-out><![CDATA[====== Tirthkumar Atulkumar Patel == TEST 1 EXECUTED
+false
+====== Tirthkumar Atulkumar Patel == TEST 2 EXECUTED
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
