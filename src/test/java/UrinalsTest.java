@@ -11,5 +11,13 @@ public class UrinalsTest
         assertEquals(false , urinal.checkEmpty(s1));
         System.out.println("====== Tirthkumar Atulkumar Patel == TEST 1 EXECUTED");
     }
+    @Test
+    public void isGoodString()
+    {
+        String s = "1010101";
+        urinals urinal = new urinals();
+        assertEquals(true, urinal.isGoodString(s));
+        System.out.println("====== Tirthkumar Atulkumar Patel == TEST 2 EXECUTED");
+    }
 
 }

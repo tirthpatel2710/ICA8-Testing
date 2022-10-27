@@ -10,6 +10,17 @@ public class urinals {
         return s.length() == 0;
     }
 
+    public boolean isGoodString(String s)
+    {
+        for(int i=0; i<s.length()-1; i++)
+        {
+            if(s.charAt(i) == '1' && s.charAt(i+1) == '1')
+                return false;
+        }
+
+        return true;
+    }
+
     public static void main(String[] args)
     {
         System.out.println("How you want to give input : ");
