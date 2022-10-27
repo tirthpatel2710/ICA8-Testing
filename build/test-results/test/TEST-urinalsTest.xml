@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="urinalsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-27T19:47:03" hostname="LAPTOP-TURCB4O8" time="0.033">
+  <properties/>
+  <testcase name="CheckEmpty()" classname="urinalsTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
