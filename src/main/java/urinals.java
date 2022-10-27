@@ -36,6 +36,8 @@ public class urinals {
         {
             if(s.charAt(0)=='0')
                 count++;
+
+            return count;
         }
         else if(s.length()==2)
         {
@@ -43,6 +45,36 @@ public class urinals {
                 return 1;
             else
                 return 0;
+        }
+
+        char[] input = s.toCharArray();
+
+        for(int i=0; i<input.length; i++)
+        {
+            if(i==0)
+            {
+                if(input[i]=='0' && input[i+1]=='0')
+                {
+                    input[i] = '1';
+                    count++;
+                }
+            }
+            else if(i==input.length-1)
+            {
+                if(input[i-1]=='0' && input[i]=='0')
+                {
+                    input[i]='1';
+                    count++;
+                }
+            }
+            else
+            {
+                if(input[i-1]=='0' && input[i+1]=='0' && input[i]=='0')
+                {
+                    input[i]='1';
+                    count++;
+                }
+            }
         }
 
         return count;
