@@ -6,8 +6,10 @@ public class UrinalsTest
     @Test
     public void CheckEmpty()
     {
-        String s1="";
+        String s1="101010";
         urinals urinal = new urinals();
-        assertTrue(urinal.checkEmpty(s1));
+        assertEquals(false , urinal.checkEmpty(s1));
+        System.out.println("====== Tirthkumar Atulkumar Patel == TEST 1 EXECUTED");
     }
+
 }
