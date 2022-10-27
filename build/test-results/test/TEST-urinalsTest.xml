@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UrinalsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-10-27T21:32:13" hostname="LAPTOP-TURCB4O8" time="0.025">
+<testsuite name="UrinalsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-10-27T21:55:51" hostname="LAPTOP-TURCB4O8" time="0.025">
   <properties/>
-  <testcase name="countFreeUrinals()" classname="UrinalsTest" time="0.021"/>
+  <testcase name="countFreeUrinals()" classname="UrinalsTest" time="0.02"/>
   <testcase name="CheckEmpty()" classname="UrinalsTest" time="0.002"/>
   <testcase name="isGoodString()" classname="UrinalsTest" time="0.001"/>
   <system-out><![CDATA[====== Tirthkumar Atulkumar Patel == TEST 3 EXECUTED

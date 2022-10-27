@@ -28,12 +28,16 @@ public class UrinalsTest
         String s3 = "01";
         String s4 = "10001";
         String s5 = "00000";
+        String s6 = "01000";
+        String s7 = "0000";
         urinals urinal = new urinals();
         assertEquals(1, urinal.countFreeUrinals(s1));
         assertEquals(1,urinal.countFreeUrinals(s2));
         assertEquals(0,urinal.countFreeUrinals(s3));
         assertEquals(1,urinal.countFreeUrinals(s4));
         assertEquals(3,urinal.countFreeUrinals(s5));
+        assertEquals(1,urinal.countFreeUrinals(s6));
+        assertEquals(2,urinal.countFreeUrinals(s7));
         System.out.println("====== Tirthkumar Atulkumar Patel == TEST 3 EXECUTED");
     }
 }
