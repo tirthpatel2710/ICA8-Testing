@@ -16,9 +16,16 @@ public class UrinalsTest
     {
         String s = "1010102";
         urinals urinal = new urinals();
-        System.out.println(urinal.isGoodString(s));
         assertEquals(false, urinal.isGoodString(s));
         System.out.println("====== Tirthkumar Atulkumar Patel == TEST 2 EXECUTED");
     }
 
+    @Test
+    void countFreeUrinals() {
+
+        String s = "0";
+        urinals urinal = new urinals();
+        assertEquals(1, urinal.countFreeUrinals(s));
+        System.out.println("====== Tirthkumar Atulkumar Patel == TEST 3 EXECUTED");
+    }
 }

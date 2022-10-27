@@ -28,6 +28,19 @@ public class urinals {
         return true;
     }
 
+    public int countFreeUrinals(String s)
+    {
+        int count = 0;
+
+        if(s.length()==1)
+        {
+            if(s.charAt(0)=='0')
+                count++;
+        }
+
+        return count;
+    }
+
     public static void main(String[] args)
     {
         System.out.println("How you want to give input : ");
