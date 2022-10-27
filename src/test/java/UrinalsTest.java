@@ -1,4 +1,8 @@
 import org.junit.jupiter.api.Test;
+
+import java.io.FileNotFoundException;
+import java.lang.reflect.Executable;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UrinalsTest
@@ -39,5 +43,15 @@ public class UrinalsTest
         assertEquals(1,urinal.countFreeUrinals(s6));
         assertEquals(2,urinal.countFreeUrinals(s7));
         System.out.println("====== Tirthkumar Atulkumar Patel == TEST 3 EXECUTED");
+    }
+
+    @Test
+    void Input2(){
+
+        String s = "src/main/resources/InputFile";
+        assertDoesNotThrow(() -> {
+            urinals.Input2(s);
+        });
+        System.out.println("====== Tirthkumar Atulkumar Patel === TEST 4 EXECUTED");
     }
 }

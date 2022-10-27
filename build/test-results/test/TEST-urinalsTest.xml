@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UrinalsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-10-27T21:55:51" hostname="LAPTOP-TURCB4O8" time="0.025">
+<testsuite name="UrinalsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-10-27T23:45:18" hostname="LAPTOP-TURCB4O8" time="0.07">
   <properties/>
-  <testcase name="countFreeUrinals()" classname="UrinalsTest" time="0.02"/>
-  <testcase name="CheckEmpty()" classname="UrinalsTest" time="0.002"/>
-  <testcase name="isGoodString()" classname="UrinalsTest" time="0.001"/>
-  <system-out><![CDATA[====== Tirthkumar Atulkumar Patel == TEST 3 EXECUTED
+  <testcase name="Input2()" classname="UrinalsTest" time="0.054"/>
+  <testcase name="countFreeUrinals()" classname="UrinalsTest" time="0.005"/>
+  <testcase name="CheckEmpty()" classname="UrinalsTest" time="0.003"/>
+  <testcase name="isGoodString()" classname="UrinalsTest" time="0.002"/>
+  <system-out><![CDATA[10001
+1001
+00000
+0000
+01000
+011
+====== Tirthkumar Atulkumar Patel === TEST 4 EXECUTED
+====== Tirthkumar Atulkumar Patel == TEST 3 EXECUTED
 ====== Tirthkumar Atulkumar Patel == TEST 1 EXECUTED
 ====== Tirthkumar Atulkumar Patel == TEST 2 EXECUTED
 ]]></system-out>
