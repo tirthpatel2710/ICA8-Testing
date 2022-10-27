@@ -37,6 +37,13 @@ public class urinals {
             if(s.charAt(0)=='0')
                 count++;
         }
+        else if(s.length()==2)
+        {
+            if(s.charAt(0)=='0' && s.charAt(1)=='0')
+                return 1;
+            else
+                return 0;
+        }
 
         return count;
     }

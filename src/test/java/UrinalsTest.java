@@ -23,9 +23,13 @@ public class UrinalsTest
     @Test
     void countFreeUrinals() {
 
-        String s = "0";
+        String s1 = "0";
+        String s2 = "00";
+        String s3 = "01";
         urinals urinal = new urinals();
-        assertEquals(1, urinal.countFreeUrinals(s));
+        assertEquals(1, urinal.countFreeUrinals(s1));
+        assertEquals(1,urinal.countFreeUrinals(s2));
+        assertEquals(0,urinal.countFreeUrinals(s3));
         System.out.println("====== Tirthkumar Atulkumar Patel == TEST 3 EXECUTED");
     }
 }
