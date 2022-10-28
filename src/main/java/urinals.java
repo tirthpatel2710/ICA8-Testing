@@ -3,6 +3,7 @@ import com.sun.security.jgss.GSSUtil;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class urinals {
@@ -14,6 +15,8 @@ public class urinals {
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
     public static List<String> l = new ArrayList<>();
     public static List<Integer> counter = new ArrayList<>();
+    public static Integer filecounter = 0;
+    //public static Map<>
     public boolean checkEmpty(String s)
     {
         return s.length() == 0;
@@ -156,6 +159,7 @@ public class urinals {
         {
             String s = Input1();
             System.out.println(s);
+            System.out.println(countFreeUrinals(s));
         }
         else
         {
@@ -179,18 +183,18 @@ public class urinals {
                 }
             }
 
-            String outputaddress = "src/main/resources/OutputFile";
-            boolean k = OutputFileCreation(outputaddress);
+            String outputaddress = "src/rule_output/";
+            boolean k = true;
+            while(k == true){
+                k = !OutputFileCreation(outputaddress + "rule" + filecounter + ".txt");
+                if (!k){
+                    break;
+                }
+                filecounter++;
+            }
 
-            if(k)
-            {
-                boolean write = WriteOutputFile(outputaddress);
-                System.out.println("Output File has been created and Output has been written");
-            }
-            else
-            {
-                System.out.println("File Already exists");
-            }
+            boolean write = WriteOutputFile(outputaddress + "rule" + filecounter + ".txt");
+            System.out.println("Output File has been created and Output has been written");
         }
 
     }
