@@ -46,12 +46,27 @@ public class UrinalsTest
     }
 
     @Test
-    void Input2(){
+    void InputFileFound(){
 
-        String s = "src/main/resources/InputFile";
+        String s1 = "src/main/resources/InputFile";
+
         assertDoesNotThrow(() -> {
-            urinals.Input2(s);
+            urinals.Input2(s1);
         });
+
         System.out.println("====== Tirthkumar Atulkumar Patel === TEST 4 EXECUTED");
+
+    }
+
+    @Test
+    void InputFIleNotFound()
+    {
+        String s2 = "src/main/resources/InputFile1";
+        assertThrows(FileNotFoundException.class, () ->{
+            urinals.Input2(s2);
+        });
+
+        System.out.println("====== Tirthkumar Atulkumar Patel === TEST 5 EXECUTED");
+
     }
 }
