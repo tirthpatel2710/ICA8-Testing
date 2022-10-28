@@ -1,6 +1,8 @@
 import com.sun.security.jgss.GSSUtil;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class urinals {
@@ -10,12 +12,14 @@ public class urinals {
      */
     static Scanner scanner = new Scanner(System.in);
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+    public static List<String> l = new ArrayList<>();
+    public static List<Integer> counter = new ArrayList<>();
     public boolean checkEmpty(String s)
     {
         return s.length() == 0;
     }
 
-    public boolean isGoodString(String s)
+    public static boolean isGoodString(String s)
     {
 
         for(int i=0; i<s.length(); i++)
@@ -33,7 +37,7 @@ public class urinals {
         return true;
     }
 
-    public int countFreeUrinals(String s)
+    public static int countFreeUrinals(String s)
     {
         int count = 0;
 
@@ -96,10 +100,14 @@ public class urinals {
             FileReader myObj = new FileReader(s);
             BufferedReader br = new BufferedReader(myObj);
             Scanner myReader = new Scanner(myObj);
-            String str ="";
+            String str;
 
             while ((str = br.readLine())!= null) {
-                System.out.println(str);
+
+                if(isGoodString(str))
+                l.add(str);
+                else
+                    l.add("-1");
             }
             myReader.close();
     }
@@ -124,6 +132,20 @@ public class urinals {
         return value;
     }
 
+    public static boolean WriteOutputFile(String s) throws IOException {
+        FileWriter writer = new FileWriter(s);
+
+        for(int i=0; i<counter.size(); i++)
+        {
+            writer.write(String.valueOf(counter.get(i)) + "\n");
+        }
+
+        if(writer.equals(writer))
+        writer.flush();
+
+        return true;
+    }
+
     public static void main(String[] args) throws IOException {
         System.out.println("How you want to give input : ");
         System.out.println("Click 1 to enter a string manually");
@@ -143,11 +165,33 @@ public class urinals {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
+            int numberOffree;
+
+            for (int i = 0; i < l.size(); i++)
+            {
+                if(l.get(i).equals("-1"))
+                    counter.add(-1);
+                else
+                {
+                    numberOffree = countFreeUrinals(l.get(i));
+                    counter.add(numberOffree);
+                }
+            }
+
+            String outputaddress = "src/main/resources/OutputFile";
+            boolean k = OutputFileCreation(outputaddress);
+
+            if(k)
+            {
+                boolean write = WriteOutputFile(outputaddress);
+                System.out.println("Output File has been created and Output has been written");
+            }
+            else
+            {
+                System.out.println("File Already exists");
+            }
         }
-
-        String s = "src/main/resources/OutputFile";
-        boolean k = OutputFileCreation(s);
-
 
     }
 

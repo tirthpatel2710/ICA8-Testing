@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UrinalsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-10-28T00:55:14" hostname="LAPTOP-TURCB4O8" time="0.032">
+<testsuite name="UrinalsTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-10-28T02:35:26" hostname="LAPTOP-TURCB4O8" time="0.041">
   <properties/>
-  <testcase name="countFreeUrinals()" classname="UrinalsTest" time="0.019"/>
-  <testcase name="NonEmptyFile()" classname="UrinalsTest" time="0.001"/>
-  <testcase name="InputFIleNotFound()" classname="UrinalsTest" time="0.002"/>
+  <testcase name="countFreeUrinals()" classname="UrinalsTest" time="0.021"/>
+  <testcase name="createNewFile()" classname="UrinalsTest" time="0.003"/>
+  <testcase name="NonEmptyFile()" classname="UrinalsTest" time="0.002"/>
+  <testcase name="InputFIleNotFound()" classname="UrinalsTest" time="0.004"/>
   <testcase name="EmptyFile()" classname="UrinalsTest" time="0.001"/>
-  <testcase name="InputFileFound()" classname="UrinalsTest" time="0.003"/>
-  <testcase name="CheckEmpty()" classname="UrinalsTest" time="0.002"/>
-  <testcase name="isGoodString()" classname="UrinalsTest" time="0.0"/>
+  <testcase name="InputFileFound()" classname="UrinalsTest" time="0.002"/>
+  <testcase name="CheckEmpty()" classname="UrinalsTest" time="0.001"/>
+  <testcase name="WriteOutputFile()" classname="UrinalsTest" time="0.001"/>
+  <testcase name="isGoodString()" classname="UrinalsTest" time="0.001"/>
   <system-out><![CDATA[====== Tirthkumar Atulkumar Patel == TEST 3 EXECUTED
+====== Tirthkumar Atulkumar Patel === TEST 8 EXECUTED
 ====== Tirthkumar Atulkumar Patel === TEST 7 EXECUTED
 ====== Tirthkumar Atulkumar Patel === TEST 5 EXECUTED
 ====== Tirthkumar Atulkumar Patel === TEST 6 EXECUTED
-10001
-1001
-00000
-0000
-01000
-011
 ====== Tirthkumar Atulkumar Patel === TEST 4 EXECUTED
 ====== Tirthkumar Atulkumar Patel == TEST 1 EXECUTED
+====== Tirthkumar Atulkumar Patel === TEST 9 EXECUTED
 ====== Tirthkumar Atulkumar Patel == TEST 2 EXECUTED
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

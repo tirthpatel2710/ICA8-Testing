@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Executable;
 
@@ -97,7 +98,15 @@ public class UrinalsTest
         // createNewFile
 
         String s = "src/main/resources/OutputFile";
-        assertEquals(false, urinals.OutputFileCreation(s));
+        assertEquals(true, urinals.OutputFileCreation(s));
         System.out.println("====== Tirthkumar Atulkumar Patel === TEST 8 EXECUTED");
+    }
+
+    @Test
+    void WriteOutputFile() throws IOException {
+
+        String s = "src/main/resources/OutputFile";
+        assertEquals(true,urinals.WriteOutputFile(s));
+        System.out.println("====== Tirthkumar Atulkumar Patel === TEST 9 EXECUTED");
     }
 }
