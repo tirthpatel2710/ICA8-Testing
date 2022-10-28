@@ -1,3 +1,5 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -97,11 +99,6 @@ public class urinals {
             String str ="";
 
             while ((str = br.readLine())!= null) {
-//                String data = myReader.nextLine();
-//
-//                if(data.equals("EOF") || data.equals("-1"))
-//                    break;
-
                 System.out.println(str);
             }
             myReader.close();
@@ -121,8 +118,13 @@ public class urinals {
         }
     }
 
-    public static void main(String[] args)
-    {
+    public static boolean OutputFileCreation(String s) throws IOException {
+        File file = new File(s);
+        boolean value = file.createNewFile();
+        return value;
+    }
+
+    public static void main(String[] args) throws IOException {
         System.out.println("How you want to give input : ");
         System.out.println("Click 1 to enter a string manually");
         System.out.println("Click 2 to take file as input");
@@ -142,5 +144,12 @@ public class urinals {
                 throw new RuntimeException(e);
             }
         }
+
+        String s = "src/main/resources/OutputFile";
+        boolean k = OutputFileCreation(s);
+
+
     }
+
+
 }
