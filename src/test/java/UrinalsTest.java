@@ -67,6 +67,27 @@ public class UrinalsTest
         });
 
         System.out.println("====== Tirthkumar Atulkumar Patel === TEST 5 EXECUTED");
+    }
 
+    @Test
+    void EmptyFile()
+    {
+        // checkEmptyFile Method has been tested here. It returns 1 for empty file.
+
+        String s = "src/main/resources/InputFile1";
+        urinals urinal = new urinals();
+        assertEquals(1, urinal.checkEmptyFile(s));
+        System.out.println("====== Tirthkumar Atulkumar Patel === TEST 6 EXECUTED");
+    }
+
+    @Test
+    void NonEmptyFile()
+    {
+        // checkEmptyFile Method has been tested here. It returns 0 for non-empty file
+
+        String s = "src/main/resources/InputFile";
+        urinals urinal = new urinals();
+        assertEquals(0, urinal.checkEmptyFile(s));
+        System.out.println("====== Tirthkumar Atulkumar Patel === TEST 7 EXECUTED");
     }
 }

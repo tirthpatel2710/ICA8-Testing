@@ -1,6 +1,4 @@
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Scanner;
 
 public class urinals {
@@ -9,6 +7,7 @@ public class urinals {
      * @author Tirthkumar Atulkumar Patel
      */
     static Scanner scanner = new Scanner(System.in);
+    BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
     public boolean checkEmpty(String s)
     {
         return s.length() == 0;
@@ -90,20 +89,36 @@ public class urinals {
         return input;
     }
 
-    public static void Input2(String s) throws FileNotFoundException {
+    public static void Input2(String s) throws IOException {
 
             FileReader myObj = new FileReader(s);
+            BufferedReader br = new BufferedReader(myObj);
             Scanner myReader = new Scanner(myObj);
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
+            String str ="";
 
-                if(data.equals("EOF") || data.equals("-1"))
-                    break;
+            while ((str = br.readLine())!= null) {
+//                String data = myReader.nextLine();
+//
+//                if(data.equals("EOF") || data.equals("-1"))
+//                    break;
 
-                System.out.println(data);
-
+                System.out.println(str);
             }
             myReader.close();
+    }
+
+    public int checkEmptyFile(String s)
+    {
+        File myObj = new File(s);
+
+        if(myObj.length()==0)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     public static void main(String[] args)
@@ -123,13 +138,9 @@ public class urinals {
             String s = "src/main/resources/InputFile";
             try {
                 Input2(s);
-            } catch (FileNotFoundException e) {
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
     }
-
-
-
-
 }
